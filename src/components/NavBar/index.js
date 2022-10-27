@@ -1,8 +1,12 @@
+// import { useContext } from "react";
+// import WishListContext from "../../hooks/context";
 import { Link } from "react-router-dom";
 import { BsCart4 } from "react-icons/bs";
 import "./style.css";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  // const wishListProducts  = useContext(WishListContext)
+
   return (
     <>
       <div className="container-fluid">
