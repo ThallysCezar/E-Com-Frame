@@ -1,5 +1,5 @@
-import { useEffect, useState, useContext } from "react";
-import WishListContext from "../../hooks/context";
+import { useEffect, useState } from "react";
+// import WishListContext from "../../hooks/context";
 import axios from "axios";
 
 import "./style.css"
@@ -10,11 +10,11 @@ const baseURL = "https://run.mocky.io/v3/91af60d6-7265-4aa5-ae9b-c13ee3d247a8";
 
 const Cards = (props) => {
   const [ecom, setEcom] = useState([]);
-  const {wishListProducts, updatewishListProducts} = useContext(WishListContext);
+  // const {wishListProducts, updatewishListProducts} = useContext(WishListContext);
 
-  const onCartClick = () => {
-    updatewishListProducts(ecom.name)
-  }
+  // const onCartClick = () => {
+  //   updatewishListProducts(ecom.name)
+  // }
 
   const getProv = async () => {
     await axios
@@ -71,7 +71,7 @@ const Cards = (props) => {
                             <BsCart4 />
                           </span>
                         </div>
-                        <div className="btn btn-wishlist" onClick={onCartClick}>
+                        <div className="btn btn-wishlist">
                           ADD TO CARD
                         </div>
                       </button>
